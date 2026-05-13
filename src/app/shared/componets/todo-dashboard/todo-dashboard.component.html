@@ -1,0 +1,18 @@
+<div class="container mt-5">
+
+  <!-- FORM -->
+  <app-todo-form
+    [editTodo]="editTodo"
+    (todoEmit)="onAddTodo($event)">
+  </app-todo-form>
+
+  <hr>
+
+  <!-- LIST (THIS SHOWS TODOS BELOW FORM) -->
+  <app-todo-list
+    [todoArr]="todoArr"
+    (deleteEmit)="onDeleteTodo($event)"
+    (editEmit)="onEditTodo($event)">
+  </app-todo-list>
+
+</div>
